@@ -1,0 +1,152 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap{
+  flex: 1;
+}
+
+/*Pagination CSS*/
+.pagination > li > a
+{
+    background-color: var(--bs-dark) !important;
+    color: var(--bs-light) !important;
+}
+
+
+.pagination > li > a:hover,
+.pagination > li > span:hover
+{
+    color: var(--bs-dark) !important;
+    background-color: var(--bs-light)  !important;
+    border-color: var(--bs-light) !important;
+}
+
+.pagination > li > a:focus,
+.pagination > li > span:focus
+{
+    color: var(--bs-light) !important;
+    background-color: var(--bs-dark)  !important;
+    border-color: var(--bs-dark) !important;
+    outline: none
+}
+
+.pagination > .active > a,
+.pagination > .active > span
+{
+    color: var(--bs-dark) !important;
+    background-color: var(--bs-light) !important;
+    border: solid 1px var(--bs-light) !important;
+}
+
+.container-results {
+  max-height: 900px; /* Set the maximum height to 400px */
+  overflow-y: auto; /* Add a vertical scroll bar if necessary */
+}
+
+/*ActorList styling*/
+.cover-container {
+  white-space: nowrap;
+  overflow-x: scroll !important;
+  overflow-y: hidden;
+}
+
+
+/*RecommendationCard styling*/
+.recommendation-link:hover{
+color:blue;
+cursor: pointer;
+}
+
+/*Modifying Scrollbar to fix rendering issues -- this may affect all the pages*/
+::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bs-dark); /* Set the color of the scrollbar thumb */
+  border-radius: 10px; /* Set the border radius of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Set the color of the scrollbar track */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.home-page {
+  background-image: url('../src/images/Home-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 73vh;
+  margin: 0;
+}
+
+/* Remove the background image from the body tag */
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+/* Add a white background to the body for all pages except Home */
+body:not(.home-page) {
+  background-color: rgb(255, 255, 255);
+}
+
+.centered {
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+
